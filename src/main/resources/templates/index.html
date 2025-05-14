@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculos Varios</title>
+    <style>
+        body {
+          font-family: sans-serif;
+          background: white;
+          text-align: center;
+          margin-top: 40px;
+        }
+
+        .container {
+          max-width: 300px;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+        }
+
+        input, select, button {
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+          padding: 8px;
+          font-size: 16px;
+        }
+
+        button {
+          background: #ddd;
+          color: black;
+          border: 1px solid #aaa;
+        }
+
+        #resultado {
+          margin-top: 15px;
+          font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Operaciones</h2>
+    <input type="number" id="numero" placeholder="Ingresa un número">
+
+    <select id="operacion" onchange="cambiarTextoBoton()">
+        <option value="">-- Operación --</option>
+        <option value="primo">Es primo</option>
+        <option value="par">Es par</option>
+        <option value="factorial">Factorial</option>
+        <option value="sumaPares">Suma pares</option>
+        <option value="sumaImpares">Suma impares</option>
+    </select>
+
+    <button id="btnOperacion" onclick="realizarOperacion()">Calcular</button>
+
+    <div id="resultado"></div>
+</div>
+
+<script src="/assets/js/calculos.js"></script>
+</body>
+</html>
